@@ -1,0 +1,23 @@
+{
+    "name": "MancUnited",
+    "short_name": "MUP APP",
+    "description": "Submision PWA pertama saya",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#181415",
+    "theme_color": "#bd1029",
+    "gcm_sender_id": "349444418317",
+    "icons": [
+        {
+          "src": "images/Mu192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        },
+        {
+          "src": "images/MU.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        }
+      ]
+}
+
