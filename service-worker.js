@@ -11,8 +11,14 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox
     { url: '/nav.html', revision: '1' },
     { url: '/registerswf.js', revision: '1' },
     { url: '/push.js', revision: '1' },
-    { url: '/nav.html', revision: '1' }
-]);
+    { url: '/pages/Saved.html', revision: '1' },
+    { url: '/pages/KlasemenLiga.html', revision: '1' },
+    { url: '/pages/Match.html', revision: '1' }
+  ],
+  {
+    // Ignore all URL parameters.
+    ignoreURLParametersMatching: [/.*/]
+  });
 
 workbox.routing.registerRoute(
     new RegExp('/pages/'),
