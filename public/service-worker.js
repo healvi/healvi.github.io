@@ -17,7 +17,7 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox
   ],
   {
     // Ignore all URL parameters.
-    ignoreURLParametersMatching: [/.*/]
+  ignoreUrlParametersMatching: [/.*/]
   });
 
 workbox.routing.registerRoute(
