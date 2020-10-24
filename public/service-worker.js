@@ -54,13 +54,19 @@ workbox.routing.registerRoute(
           cacheName: 'css'
       })
   );
-
+  workbox.routing.registerRoute(
+    new RegExp('.(?:woff|woff2)$'),
+      workbox.strategies.staleWhileRevalidate({
+          cacheName: 'font'
+      })
+  );
   workbox.routing.registerRoute(
     /^https:\/\/api\.football-data\.org\/v2/,
     workbox.strategies.staleWhileRevalidate({
       cacheName: 'api',
     })
   );
+
   workbox.routing.registerRoute(
     /^https:\/\/fonts.googleapis\.com/,
     workbox.strategies.staleWhileRevalidate({
