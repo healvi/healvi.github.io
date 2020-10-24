@@ -61,6 +61,12 @@ workbox.routing.registerRoute(
       cacheName: 'api',
     })
   );
+  workbox.routing.registerRoute(
+    /^https:\/\/fonts.googleapis\.com/,
+    workbox.strategies.staleWhileRevalidate({
+      cacheName: 'google-fonts-stylesheets',
+    })
+  );
 self.addEventListener('push', function(event) {
   var body;
   if (event.data) {

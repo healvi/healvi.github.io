@@ -17,7 +17,7 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox
   ],
   {
     // Ignore all URL parameters.
-  ignoreUrlParametersMatching: [/.*/]
+   ignoreUrlParametersMatching: [/.*/]
   });
 
 workbox.routing.registerRoute(
@@ -59,6 +59,12 @@ workbox.routing.registerRoute(
     /^https:\/\/api\.football-data\.org\/v2/,
     workbox.strategies.staleWhileRevalidate({
       cacheName: 'api',
+    })
+  );
+  workbox.routing.registerRoute(
+    /^https:\/\/fonts.googleapis\.com/,
+    workbox.strategies.staleWhileRevalidate({
+      cacheName: 'google-fonts-stylesheets',
     })
   );
 self.addEventListener('push', function(event) {
